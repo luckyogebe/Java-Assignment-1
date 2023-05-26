@@ -76,7 +76,7 @@ public class PhysicsUI {
         workDone.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainUI6();
+                mainUI7();
             }
         });
 
@@ -223,7 +223,7 @@ public class PhysicsUI {
     JButton calculates=new JButton("calculate");
 
 
-    public void mainUI6()
+    public void mainUI7()
     {
          frame7.setSize(150,200);
         frame7.setLayout(new GridLayout(3,1));
