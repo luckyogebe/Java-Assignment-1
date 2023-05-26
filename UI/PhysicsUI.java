@@ -76,7 +76,7 @@ public class PhysicsUI {
         workDone.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainUI3();
+                mainUI6();
             }
         });
 
@@ -209,6 +209,39 @@ public class PhysicsUI {
             public void actionPerformed(ActionEvent e) {
                 Energy myObj= new Energy();
                 float answer=myObj.force(Float.parseFloat(textField5.getText()),Float.parseFloat(textField6.getText()));
+                JOptionPane.showMessageDialog(null,answer);
+            }
+        });
+    }
+    
+    JFrame frame7 = new JFrame("Window");
+
+    JLabel text6 = new JLabel("  ENTER your mass:");
+    JLabel text7 = new JLabel("  ENTER your velocity:");
+    JTextField textField6= new JTextField();
+    JTextField textField7= new JTextField();
+    JButton calculates=new JButton("calculate");
+
+
+    public void mainUI6()
+    {
+         frame7.setSize(150,200);
+        frame7.setLayout(new GridLayout(3,1));
+        frame7.setVisible(true);
+
+
+        frame7.add(text5);
+        frame7.add(textField5);
+        frame7.add(text6);
+        frame7.add(textField6);
+        frame7.add(calculate);
+        frame7.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        calculate.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Energy myObj= new Energy();
+                float answer=myObj.force(Float.parseFloat(textField6.getText()),Float.parseFloat(textField7.getText()));
                 JOptionPane.showMessageDialog(null,answer);
             }
         });
